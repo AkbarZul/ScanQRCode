@@ -5,6 +5,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Main from '../screens/Main';
 import LoginScreen from "../screens/Login";
 import Scan from "../screens/Scan";
+import Generate from "../screens/Generate";
 
 const Stack = createStackNavigator();
 
@@ -24,6 +25,11 @@ const StackScreen = () => {
       <Stack.Screen
         name="Scan"
         component={Scan}
+        options={{headerShown: false}}
+      />
+       <Stack.Screen
+        name="Generate"
+        component={Generate}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

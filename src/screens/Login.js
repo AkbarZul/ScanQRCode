@@ -66,12 +66,12 @@ const LoginScreen = ({navigation, login}) => {
           })
           .catch((err) => {
             console.log(err);
-            // if (err.response.data.message.msg === 'User Not Found') {
-            //   setErrMsg('Email/Password Salah');
-            // }
-            // if (err.response.data.message.msg === 'Wrong Password') {
-            //   setErrMsg('Email/Password Salah');
-            // }
+            if (err.response.data.message.msg === 'User Not Found') {
+              setErrMsg('Email/Password Salah');
+            }
+            if (err.response.data.message.msg === 'Wrong Password') {
+              setErrMsg('Email/Password Salah');
+            }
           });
       }
     }
