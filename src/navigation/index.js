@@ -3,7 +3,8 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import Main from '../screens/Main';
-import Login from "../screens/Login";
+import LoginScreen from "../screens/Login";
+import Scan from "../screens/Scan";
 
 const Stack = createStackNavigator();
 
@@ -17,7 +18,12 @@ const StackScreen = () => {
       />
        <Stack.Screen
         name="Login"
-        component={Login}
+        component={LoginScreen}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Scan"
+        component={Scan}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

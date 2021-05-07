@@ -6,6 +6,7 @@ const INITIAL_STATE = {
   user_id: null,
   email: '',
   fullname: '',
+  level: null,
 };
 
 const authReducer = (state = INITIAL_STATE, action) => {
@@ -18,6 +19,7 @@ const authReducer = (state = INITIAL_STATE, action) => {
         user_id: action.payload.user_id,
         fullname: action.payload.fullname,
         email: action.payload.email,
+        level: action.payload.level,
       };
     default:
       return state;
